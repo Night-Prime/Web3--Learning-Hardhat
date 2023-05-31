@@ -1,4 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox")
+require("@nomiclabs/hardhat-etherscan")
+require("hardhat-gas-reporter")
+require("solidity-coverage")
 require("hardhat-deploy")
 require("dotenv").config()
 
@@ -27,12 +30,12 @@ module.exports = {
         },
     },
     gasReporter: {
-        enabled: false,
+        enabled: true,
         noColors: true,
         outputFile: "gas-report.txt",
         token: "MATIC",
         currency: "USD",
-        coinmarketcap: COINMARKET_KEY,
+        // coinmarketcap: COINMARKET_KEY,
     },
     etherscan: {
         apiKey: ETHERSCAN_API_KEY,

@@ -1,4 +1,6 @@
 {
+    "name": "hardhat-fundme",
+    "author": {"email": "danielabatibabatunde1@gmail.com", "name": "Abati Babatunde"},
   "devDependencies": {
     "@chainlink/contracts": "^0.6.1",
     "@nomicfoundation/hardhat-toolbox": "^2.0.2",
@@ -11,5 +13,13 @@
   },
   "dependencies": {
     "dotenv": "^16.0.3"
+  },
+  "scripts": {
+    "test": "npx hardhat test",
+    "test-staging": "npx hardhat test --network sepolia",
+    "lint": "npx solhint 'contracts/*.sol'" ,
+    "lint:fix": "npx solhint 'contracts/*.sol' --fix",
+    "format": "npx prettier --write .",
+    "coverage": "npx hardhat coverage"
   }
 }

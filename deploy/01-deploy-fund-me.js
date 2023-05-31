@@ -3,7 +3,7 @@ const { network } = require("hardhat")
 const { verify } = require("../utils/verify")
 require("dotenv").config()
 
-module.exports.default = async ({ getNamedAccounts, deployments }) => {
+module.exports = async ({ getNamedAccounts, deployments }) => {
     const { deploy, log } = deployments
     const { deployer } = await getNamedAccounts()
     const chainId = network.config.chainId
@@ -34,4 +34,4 @@ module.exports.default = async ({ getNamedAccounts, deployments }) => {
     log("----------------------------------------------------")
     log(ethUsdPriceFeedAddress)
 }
-module.exports.tags = ["all", "fundMe"]
+module.exports.tags = ["all", "fundMe", "fundme", "FundMe"]
